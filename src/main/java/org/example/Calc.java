@@ -39,7 +39,7 @@ public class Calc {
 
                 default:
                     System.out.println("Unknown operation!");
-                    continue;
+                    break;
 
             }
 
