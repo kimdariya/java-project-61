@@ -1,8 +1,8 @@
 setup:
-	./gradlew clean install
+	cd code/app && ./gradlew clean install
 
 run-dist:
-	./build/install/brain-games/bin/brain-games
+	./code/app/build/install/brain-games/bin/brain-games
 
 test:
-	./gradlew test
+	cd code/app && ./gradlew test
