@@ -47,7 +47,7 @@ tasks.withType(Checkstyle) {
 
 sonar {
     properties {
-        property "sonar.projectKey", "kimdariya_java-project-612"
+        property "sonar.projectKey", "kimdariya_java-project-61"
         property "sonar.organization", "kimdariya-1"
     }
 }
