@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
+    private static final int MAX_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static void gcd(Scanner scanner) {
         Greet.greeting(scanner);
@@ -12,9 +14,9 @@ public class GCD {
         int correctCounter = 0;
         Random random = new Random();
 
-        while (correctCounter < 3) {
-            int num1 = random.nextInt(100) + 1;
-            int num2 = random.nextInt(100) + 1;
+        while (correctCounter < MAX_ROUNDS) {
+            int num1 = random.nextInt(MAX_NUMBER) + 1;
+            int num2 = random.nextInt(MAX_NUMBER) + 1;
             System.out.println("Question: " + num1 + " " + num2);
 
 

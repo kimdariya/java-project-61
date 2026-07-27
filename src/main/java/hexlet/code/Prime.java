@@ -4,6 +4,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Prime {
+    private static final int MAX_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
+
     public static void prime(Scanner scanner) {
         Greet.greeting(scanner);
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -11,8 +14,8 @@ public class Prime {
         int correctCounter = 0;
         Random random = new Random();
 
-        while (correctCounter < 3) {
-            int num = random.nextInt(100) + 1;
+        while (correctCounter < MAX_ROUNDS) {
+            int num = random.nextInt(MAX_NUMBER) + 1;
 
             System.out.println("Question: " + num);
             System.out.print("Your answer: ");

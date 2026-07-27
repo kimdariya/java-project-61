@@ -4,6 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
+    private static final int MAX_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
+    private static final int MAX_POS = 10;
+
     public static void prog(Scanner scanner) {
         Greet.greeting(scanner);
         System.out.println("What number is missing in the progression?");
@@ -12,10 +16,10 @@ public class Progression {
         String ans;
         Random random = new Random();
 
-        while (correctCounter < 3) {
-            int delta = random.nextInt(100) + 1;
-            int start = random.nextInt(100) + 1;
-            int position = random.nextInt(10);
+        while (correctCounter < MAX_ROUNDS) {
+            int delta = random.nextInt(MAX_NUMBER) + 1;
+            int start = random.nextInt(MAX_NUMBER) + 1;
+            int position = random.nextInt(MAX_POS);
 
             System.out.println("Question: " + progressionLine(delta, start, position));
             int correctResult = progressionElement(start, delta, position);

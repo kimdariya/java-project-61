@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 
 public class Calc {
+    private static final int MAX_ROUNDS = 3;
+    private static final int MAX_NUMBER = 100;
 
     public static void calc(Scanner scanner) {
         Greet.greeting(scanner);
@@ -15,9 +17,9 @@ public class Calc {
         String ans;
         Random random = new Random();
 
-        while (correctCounter < 3) {
-            int num1 = random.nextInt(100) + 1;
-            int num2 = random.nextInt(100) + 1;
+        while (correctCounter < MAX_ROUNDS) {
+            int num1 = random.nextInt(MAX_NUMBER) + 1;
+            int num2 = random.nextInt(MAX_NUMBER) + 1;
 
             int operation = random.nextInt(3) + 1;
 
