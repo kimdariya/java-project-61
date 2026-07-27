@@ -15,7 +15,7 @@ public class Calc {
         String ans;
         Random random = new Random();
 
-        while (true) {
+        while (correctCounter < 3) {
             int num1 = random.nextInt(100) + 1;
             int num2 = random.nextInt(100) + 1;
 
@@ -57,7 +57,6 @@ public class Calc {
 
                 if (correctCounter == 3) {
                     System.out.println("Congratulations, " + Greet.name + "!");
-                    break;
                 }
 
             } catch (NumberFormatException e) {

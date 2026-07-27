@@ -12,7 +12,7 @@ public class Progression {
         String ans;
         Random random = new Random();
 
-        while (true) {
+        while (correctCounter < 3) {
             int delta = random.nextInt(100) + 1;
             int start = random.nextInt(100) + 1;
             int position = random.nextInt(10);
@@ -35,7 +35,6 @@ public class Progression {
 
                 if (correctCounter == 3) {
                     System.out.println("Congratulations, " + Greet.name + "!");
-                    break;
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number!");

@@ -12,7 +12,7 @@ public class GCD {
         int correctCounter = 0;
         Random random = new Random();
 
-        while (true) {
+        while (correctCounter < 3) {
             int num1 = random.nextInt(100) + 1;
             int num2 = random.nextInt(100) + 1;
             System.out.println("Question: " + num1 + " " + num2);
@@ -34,7 +34,6 @@ public class GCD {
 
                 if (correctCounter == 3) {
                     System.out.println("Congratulations, " + Greet.name + "!");
-                    break;
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Please enter a number!");

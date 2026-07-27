@@ -13,7 +13,7 @@ public class Even {
         Random random = new Random();
         int correctCounter = 0;
 
-        while (true) {
+        while (correctCounter < 3) {
 
             int num = random.nextInt(100) + 1;
             System.out.println("Question: " + num);
@@ -24,7 +24,6 @@ public class Even {
             if (!ans.equals("yes") && !ans.equals("no")) {
                 System.out.println("Let's try again, " + Greet.name + "!");
                 correctCounter = 0;
-                continue;
             }
 
             if (num % 2 == 0 && ans.equals("yes")) {
@@ -40,7 +39,6 @@ public class Even {
 
             if (correctCounter == 3) {
                 System.out.println("Congratulations, " + Greet.name + "!");
-                break;
             }
 
         }

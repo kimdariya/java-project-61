@@ -11,7 +11,7 @@ public class Prime {
         int correctCounter = 0;
         Random random = new Random();
 
-        while (true) {
+        while (correctCounter < 3) {
             int num = random.nextInt(100) + 1;
 
             System.out.println("Question: " + num);
@@ -30,7 +30,6 @@ public class Prime {
 
             if (correctCounter == 3) {
                 System.out.println("Congratulations, " + Greet.name + "!");
-                break;
             }
         }
     }
