@@ -1,2 +1,2 @@
 run-dist:
-	./build/install/brain-game/bin/brain-game
+	./build/install/brain-games/bin/brain-games
