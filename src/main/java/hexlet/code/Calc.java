@@ -7,6 +7,10 @@ import java.util.Scanner;
 public class Calc {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
+    private static final String QUESTION_MESSAGE = "Question: ";
+
+    private Calc() {
+    }
 
     public static void calc(Scanner scanner) {
         Greet.greeting(scanner);
@@ -25,7 +29,7 @@ public class Calc {
 
             switch (operation) {
                 case 1://add
-                    System.out.println("Question: " + num1 + " + " + num2);
+                    System.out.println(QUESTION_MESSAGE + num1 + " + " + num2);
                     correctResult = add(num1, num2);
                     break;
 

@@ -7,6 +7,10 @@ public class Progression {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
     private static final int MAX_POS = 10;
+    private static final String QUESTION_MESSAGE = "Question: ";
+
+    private Progression() {
+    }
 
     public static void prog(Scanner scanner) {
         Greet.greeting(scanner);
@@ -21,7 +25,7 @@ public class Progression {
             int start = random.nextInt(MAX_NUMBER) + 1;
             int position = random.nextInt(MAX_POS);
 
-            System.out.println("Question: " + progressionLine(delta, start, position));
+            System.out.println(QUESTION_MESSAGE + progressionLine(delta, start, position));
             int correctResult = progressionElement(start, delta, position);
 
             try {

@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class Prime {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
+    private static final String QUESTION_MESSAGE = "Question: ";
+
+    private Prime() {
+    }
 
     public static void prime(Scanner scanner) {
         Greet.greeting(scanner);
@@ -17,7 +21,7 @@ public class Prime {
         while (correctCounter < MAX_ROUNDS) {
             int num = random.nextInt(MAX_NUMBER) + 1;
 
-            System.out.println("Question: " + num);
+            System.out.println(QUESTION_MESSAGE + num);
             System.out.print("Your answer: ");
             String ans = scanner.nextLine().toLowerCase();
 

@@ -6,6 +6,10 @@ import java.util.Scanner;
 public class GCD {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
+    private static final String QUESTION_MESSAGE = "Question: ";
+
+    private GCD() {
+    }
 
     public static void gcd(Scanner scanner) {
         Greet.greeting(scanner);
@@ -17,7 +21,7 @@ public class GCD {
         while (correctCounter < MAX_ROUNDS) {
             int num1 = random.nextInt(MAX_NUMBER) + 1;
             int num2 = random.nextInt(MAX_NUMBER) + 1;
-            System.out.println("Question: " + num1 + " " + num2);
+            System.out.println(QUESTION_MESSAGE + num1 + " " + num2);
 
 
             int correctResult = findGcd(num1, num2);
