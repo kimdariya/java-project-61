@@ -1,0 +1,14 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Greet {
+    static String name;
+
+    public static void greeting(Scanner scanner) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
+    }
+}

@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle'
+    id "org.sonarqube" version "7.3.1.8318"
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    checkstyle "com.puppycrawl.tools:checkstyle:${checkstyle.toolVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'org.example.App'
+}
+
+tasks.named('run', JavaExec) {
+    standardInput = System.in
+}
+
+checkstyle {
+    toolVersion = '10.12.0'
+    configFile = file("config/checkstyle/checkstyle.xml")
+    showViolations = true
+    ignoreFailures = false
+}
+
+tasks.withType(Checkstyle) {
+    reports {
+        xml.required = false
+        html.required = true
+    }
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "kimdariya_java-project-612"
+        property "sonar.organization", "kimdariya-1"
+    }
+}
