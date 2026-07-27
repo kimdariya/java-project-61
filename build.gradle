@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id 'checkstyle'
+    id "org.sonarqube" version "7.3.1.8318"
 }
 
 group = 'org.example'
@@ -41,5 +42,12 @@ tasks.withType(Checkstyle) {
     reports {
         xml.required = false
         html.required = true
+    }
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "kimdariya_java-project-612"
+        property "sonar.organization", "kimdariya-1"
     }
 }
