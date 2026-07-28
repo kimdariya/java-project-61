@@ -26,7 +26,7 @@ public class Progression {
             int position = random.nextInt(MAX_POS);
 
             System.out.println(QUESTION_MESSAGE + progressionLine(delta, start, position));
-            int correctResult = progressionElement(start, delta, position);
+            int correctResult = progressionElement(delta, start, position);
 
             try {
                 ans = scanner.nextLine().toLowerCase();
@@ -56,15 +56,14 @@ public class Progression {
     }
 
     private static String progressionLine(int delta, int start, int position) {
-        int temp = start;
         StringBuilder line = new StringBuilder();
         for (int i = 0; i < 10; i++) {
+            int value = start + delta * i;
             if (i == position) {
                 line.append(" ..");
             } else {
-                line.append(" ").append(temp);
+                line.append(" ").append(value);
             }
-            temp += delta;
         }
         return line.toString().trim();
     }
