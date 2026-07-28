@@ -24,8 +24,8 @@ public class Even {
             int num = random.nextInt(MAX_NUMBER) + 1;
             System.out.println(QUESTION_MESSAGE + num);
 
-            System.out.print("Your answer: ");
             String ans = scanner.nextLine().toLowerCase();
+            System.out.println("Your answer: " + ans);
 
             if (!ans.equals("yes") && !ans.equals("no")) {
                 System.out.println("Let's try again, " + Greet.name + "!");

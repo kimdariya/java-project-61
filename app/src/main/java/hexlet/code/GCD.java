@@ -26,8 +26,8 @@ public class GCD {
 
             int correctResult = findGcd(num1, num2);
             try {
-                System.out.print("Your answer: ");
                 String ans = scanner.nextLine().toLowerCase();
+                System.out.println("Your answer: " + ans);
 
                 if (correctResult == Integer.parseInt(ans)) {
                     correctCounter++;

@@ -22,8 +22,8 @@ public class Prime {
             int num = random.nextInt(MAX_NUMBER) + 1;
 
             System.out.println(QUESTION_MESSAGE + num);
-            System.out.print("Your answer: ");
             String ans = scanner.nextLine().toLowerCase();
+            System.out.println("Your answer: " + ans);
 
             if ((isPrime(num) && ans.equals("yes")) || (!isPrime(num) && ans.equals("no"))) {
                 correctCounter++;

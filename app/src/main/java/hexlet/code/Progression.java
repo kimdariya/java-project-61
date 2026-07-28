@@ -29,8 +29,8 @@ public class Progression {
             int correctResult = progressionElement(start, delta, position);
 
             try {
-                System.out.print("Your answer: ");
                 ans = scanner.nextLine().toLowerCase();
+                System.out.println("Your answer: " + ans);
 
                 if (correctResult == Integer.parseInt(ans)) {
                     correctCounter++;

@@ -50,8 +50,8 @@ public class Calc {
             }
 
             try {
-                System.out.print("Your answer: ");
                 ans = scanner.nextLine().toLowerCase();
+                System.out.println("Your answer: " + ans);
                 if (correctResult == Integer.parseInt(ans)) {
                     correctCounter++;
                     System.out.println("Correct!");
