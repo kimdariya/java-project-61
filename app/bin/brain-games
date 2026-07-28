@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-exec ../app/build/install/brain-games/bin/brain-games
+cd "$(dirname "$0")/.." || exit
+exec ./gradlew run --quiet
