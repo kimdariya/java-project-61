@@ -32,7 +32,7 @@ public class Prime {
                 String correctAnswer = isPrime(num) ? "yes" : "no";
                 System.out.println("'" + ans + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + Greet.name + "!");
-                correctCounter = 0;
+                break;
             }
 
             if (correctCounter == 3) {

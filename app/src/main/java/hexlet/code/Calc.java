@@ -58,7 +58,7 @@ public class Calc {
                 } else {
                     System.out.println("'" + ans + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
                     System.out.println("Let's try again, " + Greet.name + "!");
-                    correctCounter = 0;
+                    break;
                 }
 
                 if (correctCounter == 3) {

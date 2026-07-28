@@ -40,7 +40,7 @@ public class Even {
                 correctCounter++;
             } else {
                 System.out.println("Let's try again, " + Greet.name + "!");
-                correctCounter = 0;
+                break;
             }
 
             if (correctCounter == 3) {
