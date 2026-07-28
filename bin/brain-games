@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-./app/gradlew run -p app/ --quiet
