@@ -30,7 +30,6 @@ public class Even {
             if (!ans.equals("yes") && !ans.equals("no")) {
                 System.out.println("Let's try again, " + Greet.name + "!");
                 correctCounter = 0;
-                continue;
             }
 
             if (num % 2 == 0 && ans.equals("yes")) {
