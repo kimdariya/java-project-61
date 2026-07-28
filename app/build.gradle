@@ -17,6 +17,7 @@ dependencies {
 
 application {
     mainClass = 'hexlet.code.App'
+    applicationName = 'app'
 }
 
 tasks.named('run', JavaExec) {
