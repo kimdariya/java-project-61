@@ -3,3 +3,6 @@ setup:
 
 run-dist:
 	./app/build/install/brain-games/bin/brain-games
+
+test:
+	./app/build/install/brain-games/bin/brain-games
