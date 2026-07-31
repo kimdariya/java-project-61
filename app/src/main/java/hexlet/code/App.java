@@ -31,7 +31,7 @@ public class App {
         } else if (mode.equals("0")) {
             System.out.println("Goodbye!");
         } else {
-            System.out.println("Error! No such mode exists! :(");
+            System.out.println("Error! :( Invalid mode entered: '" + mode + "'. Please enter a number from 0 to 6.");
         }
         scanner.close();
     }

@@ -6,46 +6,24 @@ import java.util.Scanner;
 public class GCD {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
-    private static final String QUESTION_MESSAGE = "Question: ";
 
     private GCD() {
     }
 
     public static void gcd(Scanner scanner) {
-        Greet.greeting(scanner);
-        System.out.println("Find the greatest common divisor of given numbers.");
 
-        int correctCounter = 0;
+        String[][] rounds = new String[MAX_ROUNDS][2];
         Random random = new Random();
 
-        while (correctCounter < MAX_ROUNDS) {
+        for (int i = 0; i < MAX_ROUNDS; i++) {
             int num1 = random.nextInt(MAX_NUMBER) + 1;
             int num2 = random.nextInt(MAX_NUMBER) + 1;
-            System.out.println(QUESTION_MESSAGE + num1 + " " + num2);
 
-
-            int correctResult = findGcd(num1, num2);
-            try {
-                String ans = scanner.nextLine().toLowerCase();
-                System.out.println("Your answer: " + ans);
-
-                if (correctResult == Integer.parseInt(ans)) {
-                    correctCounter++;
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + ans + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
-                    System.out.println("Let's try again, " + Greet.name + "!");
-                    break;
-                }
-
-                if (correctCounter == 3) {
-                    System.out.println("Congratulations, " + Greet.name + "!");
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a number!");
-                correctCounter = 0;
-            }
+            rounds[i][0] = String.valueOf(num1 + " " + num2);
+            rounds[i][1] = findGcd(num1, num2);
         }
+
+        Engine.run(scanner, "Find the greatest common divisor of given numbers.", rounds);
     }
 
     private static int findGcd(int num1, int num2) {

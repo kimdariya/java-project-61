@@ -7,82 +7,37 @@ import java.util.Scanner;
 public class Calc {
     private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
-    private static final String QUESTION_MESSAGE = "Question: ";
+    private static final char[] OPERATORS = {'+', '-', '*'};
 
     private Calc() {
     }
 
     public static void calc(Scanner scanner) {
-        Greet.greeting(scanner);
-        System.out.println("What is the result of the expression?");
 
-        int correctCounter = 0;
-        int correctResult = 0;
-        String ans;
+        String[][] rounds = new String[MAX_ROUNDS][2];
         Random random = new Random();
 
-        while (correctCounter < MAX_ROUNDS) {
+        for (int i = 0; i < MAX_ROUNDS; i++) {
             int num1 = random.nextInt(MAX_NUMBER) + 1;
             int num2 = random.nextInt(MAX_NUMBER) + 1;
+            char operator = OPERATORS[random.nextInt(OPERATORS.length)];
 
-            int operation = random.nextInt(3) + 1;
+            rounds[i][0] = num1 + " " + operator + " " + num2;
+            rounds[i][1] = String.valueOf(calculate(num1, num2, operator));
 
-            switch (operation) {
-                case 1://add
-                    System.out.println(QUESTION_MESSAGE + num1 + " + " + num2);
-                    correctResult = add(num1, num2);
-                    break;
-
-                case 2://sub
-                    System.out.println("Question: " + num1 + " - " + num2);
-                    correctResult = sub(num1, num2);
-                    break;
-
-                case 3://mult
-                    System.out.println("Question: " + num1 + " * " + num2);
-                    correctResult = mult(num1, num2);
-                    break;
-
-                default:
-                    System.out.println("Unknown operation!");
-                    break;
-
-            }
-
-            try {
-                ans = scanner.nextLine().toLowerCase();
-                System.out.println("Your answer: " + ans);
-                if (correctResult == Integer.parseInt(ans)) {
-                    correctCounter++;
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + ans + "' is wrong answer ;(. Correct answer was '" + correctResult + "'.");
-                    System.out.println("Let's try again, " + Greet.name + "!");
-                    break;
-                }
-
-                if (correctCounter == 3) {
-                    System.out.println("Congratulations, " + Greet.name + "!");
-                }
-
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a number!");
-                correctCounter = 0;
-            }
         }
-
+        Engine.run(scanner, "What is the result of the expression?", rounds);
     }
 
-    public static int add(int n1, int n2) {
-        return n1 + n2;
-    }
-
-    public static int sub(int n1, int n2) {
-        return n1 - n2;
-    }
-
-    public static int mult(int n1, int n2) {
-        return n1 * n2;
+    private static int calculate(int num1, int num2, char operator) {
+        switch (operator) {
+            case '+':
+                return num1 + num2;
+            case '-':
+                return num1 - num2;
+            case '*':
+                return num1 * num2;
+        }
     }
 
 }
