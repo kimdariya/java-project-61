@@ -37,7 +37,8 @@ public class Calc {
                 return num1 - num2;
             case '*':
                 return num1 * num2;
+            default:
+                throw new IllegalArgumentException("Unknown operator: " + operator);
         }
     }
-
 }
