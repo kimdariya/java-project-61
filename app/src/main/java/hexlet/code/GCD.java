@@ -20,7 +20,7 @@ public class GCD {
             int num2 = random.nextInt(MAX_NUMBER) + 1;
 
             rounds[i][0] = String.valueOf(num1 + " " + num2);
-            rounds[i][1] = findGcd(num1, num2);
+            rounds[i][1] = String.valueOf(findGcd(num1, num2));
         }
 
         Engine.run(scanner, "Find the greatest common divisor of given numbers.", rounds);

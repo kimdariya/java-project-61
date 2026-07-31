@@ -9,7 +9,8 @@ public class Greet {
     public static void greeting(Scanner scanner) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        name = scanner.nextLine();
+        String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
+        return name;
     }
 }
