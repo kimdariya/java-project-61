@@ -6,7 +6,7 @@ public class Greet {
     private Greet() {
     }
 
-    public static void greeting(Scanner scanner) {
+    public static String greeting(Scanner scanner) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String name = scanner.nextLine();
