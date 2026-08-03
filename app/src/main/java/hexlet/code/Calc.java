@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 
 public class Calc {
-    private static final int MAX_ROUNDS = 3;
     private static final int MAX_NUMBER = 100;
     private static final char[] OPERATORS = {'+', '-', '*'};
+    private static final String DESCRIPTION = "What is the result of the expression?";
 
     private Calc() {
     }
 
-    public static void calc(Scanner scanner) {
+    public static void calc() {
 
-        String[][] rounds = new String[MAX_ROUNDS][2];
+        String[][] rounds = new String[Engine.MAX_ROUNDS][2];
         Random random = new Random();
 
-        for (int i = 0; i < MAX_ROUNDS; i++) {
+        for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             int num1 = random.nextInt(MAX_NUMBER) + 1;
             int num2 = random.nextInt(MAX_NUMBER) + 1;
             char operator = OPERATORS[random.nextInt(OPERATORS.length)];
@@ -26,7 +26,7 @@ public class Calc {
             rounds[i][1] = String.valueOf(calculate(num1, num2, operator));
 
         }
-        Engine.run(scanner, "What is the result of the expression?", rounds);
+        Engine.run(DESCRIPTION, rounds);
     }
 
     private static int calculate(int num1, int num2, char operator) {

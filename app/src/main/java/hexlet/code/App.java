@@ -19,15 +19,15 @@ public class App {
         if (mode.equals("1")) {
             Greet.greeting(scanner);
         } else if (mode.equals("2")) {
-            Even.even(scanner);
+            Even.even();
         } else if (mode.equals("3")) {
-            Calc.calc(scanner);
+            Calc.calc();
         } else if (mode.equals("4")) {
-            GCD.gcd(scanner);
+            GCD.gcd();
         } else if (mode.equals("5")) {
-            Progression.prog(scanner);
+            Progression.prog();
         } else if (mode.equals("6")) {
-            Prime.prime(scanner);
+            Prime.prime();
         } else if (mode.equals("0")) {
             System.out.println("Goodbye!");
         } else {

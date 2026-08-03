@@ -3,11 +3,12 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine{
-    private static final int MAX_ROUNDS = 3;
+    public static final int MAX_ROUNDS = 3;
+    private static final Scanner scanner = new Scanner(System.in);
 
     private Engine() {}
 
-    public static void  run(Scanner scanner, String description, String[][] rounds) {
+    public static void  run(String description, String[][] rounds) {
         String userName = Greet.greeting(scanner);
         System.out.println(description);
 
