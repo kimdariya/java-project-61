@@ -13,7 +13,6 @@ public final class Even {
 
         Random random = new Random();
         String[][] rounds = new String[Engine.MAX_ROUNDS][2];
-        int correctCounter = 0;
 
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             int num = random.nextInt(MAX_NUMBER) + 1;
