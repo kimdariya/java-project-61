@@ -20,26 +20,22 @@ public final class Progression {
             int start = random.nextInt(MAX_NUMBER) + 1;
             int position = random.nextInt(MAX_POS);
 
-            String fullLine = progressionLine(delta, start);
-            String[] parts = fullLine.split(" ");
-            parts[position] = "..";
-            String question = String.join(" ", parts);
+            String[] progression = makeProgression(start, delta, MAX_POS);
+            String answer = progression[position];
+            progression[position] = "..";
+            String question = String.join(" ", progression);
             rounds[i][0] = question;
-            rounds[i][1] = String.valueOf(start + delta * position);
+            rounds[i][1] = answer;
         }
         Engine.run(DESCRIPTION, rounds);
     }
 
-    private static String progressionLine(int delta, int start) {
-        StringBuilder line = new StringBuilder();
-        for (int i = 0; i < 10; i++) {
-            int value = start + delta * i;
-            line.append(value);
-            if (i < 9) {
-                line.append(" ");
-            }
+    private static String[] makeProgression(int start, int delta, int length) {
+        String[] result = new String[length];
+        for (int i = 0; i < length; i++) {
+            result[i] = String.valueOf(start + delta * i);
         }
-        return line.toString();
+        return result;
     }
 
 }
