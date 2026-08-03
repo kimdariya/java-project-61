@@ -1,6 +1,15 @@
 # Brain-games
 ___
 
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/kimdariya/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kimdariya/java-project-61/actions)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
+
+___
+
 # Description:
 Brain Games is a console-based collection of five Java-based math games designed to train logical thinking and basic arithmetic skills. Each game presents a series of three questions that must be answered correctly to win.
 
@@ -51,12 +60,3 @@ Please enter the game number and press Enter.
 - To win, you must correctly answer 3 questions in a row.
 
 - If you make a mistake, the game ends and you'll be asked to try again.
-
-___
-
-### Hexlet tests and linter status:
-[![Actions Status](https://github.com/kimdariya/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/kimdariya/java-project-61/actions)
-
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kimdariya_java-project-612&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=kimdariya_java-project-612)
