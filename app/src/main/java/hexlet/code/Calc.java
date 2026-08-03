@@ -1,10 +1,9 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
 
-public class Calc {
+public final class Calc {
     private static final int MAX_NUMBER = 100;
     private static final char[] OPERATORS = {'+', '-', '*'};
     private static final String DESCRIPTION = "What is the result of the expression?";

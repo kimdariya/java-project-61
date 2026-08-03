@@ -1,9 +1,8 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
-public class Even {
+public final class Even {
     private static final int MAX_NUMBER = 100;
     private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 

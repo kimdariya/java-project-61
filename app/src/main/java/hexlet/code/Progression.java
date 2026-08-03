@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Random;
 
-public class Progression {
+public final class Progression {
     private static final int MAX_NUMBER = 100;
     private static final int MAX_POS = 10;
     private static final String DESCRIPTION = "What number is missing in the progression?";

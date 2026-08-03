@@ -1,9 +1,8 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
-public class Prime {
+public final class Prime {
     private static final int MAX_NUMBER = 100;
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 

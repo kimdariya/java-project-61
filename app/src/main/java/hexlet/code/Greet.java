@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Greet {
+public final class Greet {
     private Greet() {
     }
 

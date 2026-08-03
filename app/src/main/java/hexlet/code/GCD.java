@@ -1,9 +1,8 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
-public class GCD {
+public final class GCD {
     private static final int MAX_NUMBER = 100;
     private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
 

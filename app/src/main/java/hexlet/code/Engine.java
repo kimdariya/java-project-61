@@ -2,21 +2,22 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-public class Engine{
+public final class Engine {
     public static final int MAX_ROUNDS = 3;
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
 
-    private Engine() {}
+    private Engine() {
+    }
 
-    public static void  run(String description, String[][] rounds) {
-        String userName = Greet.greeting(scanner);
+    public static void run(String description, String[][] rounds) {
+        String userName = Greet.greeting(SCANNER);
         System.out.println(description);
 
         int correctCounter = 0;
 
         for (int i = 0; i < MAX_ROUNDS; i++) {
             System.out.println("Question: " + rounds[i][0]);
-            String answer = scanner.nextLine().toLowerCase().trim();
+            String answer = SCANNER.nextLine().toLowerCase().trim();
             System.out.println("Your answer: " + answer);
 
             if (answer.isEmpty()) {
